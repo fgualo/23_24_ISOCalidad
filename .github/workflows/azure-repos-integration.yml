@@ -16,6 +16,8 @@ jobs:
     - name: Push to Azure Repos
       env:
         AZURE_REPO_URL: ${{secrets.AZURE_REPO_URL}} # Define esta variable de secreto en la configuración de tu repositorio
+        AZURE_DEVOPS_TOKEN: ${{secrets.AZURE_DEVOPS_TOKEN}}
+
       run: |
         git remote add azure-repos $AZURE_REPO_URL
         git push azure-repos main # Cambia "main" al nombre de tu rama principal
