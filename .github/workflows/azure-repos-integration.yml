@@ -1,0 +1,21 @@
+name: Integración con Azure Repos
+
+on:
+  push:
+    branches:
+      - main # Cambia esto al nombre de tu rama principal
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Push to Azure Repos
+      env:
+        AZURE_REPO_URL: ${{secrets.AZURE_REPO_URL}} # Define esta variable de secreto en la configuración de tu repositorio
+      run: |
+        git remote add azure-repos $AZURE_REPO_URL
+        git push azure-repos main # Cambia "main" al nombre de tu rama principal
