@@ -18,6 +18,8 @@ jobs:
         AZURE_REPO_URL: https://dev.azure.com/Gualo/Test_Git2Repos/_git/Test_Git2Repos
         AZURE_DEVOPS_TOKEN: ${{secrets.AZURE_DEVOPS_TOKEN}}
       run: |
+        git config --global user.email "Fernando.Gualo@uclm.es"
+        git config --global user.name "Gualo"
         git config --global credential.helper store
         echo "https://Gualo:fctx6ofgqhodajhgmsboefb4avjmr6zsk6daifknfvlw5ripxtla@dev.azure.com/Gualo/Test_Git2Repos/_git/Test_Git2Repos" > ~/.git-credentials
         git add .
