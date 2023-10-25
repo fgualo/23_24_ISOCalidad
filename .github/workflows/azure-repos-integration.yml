@@ -18,8 +18,9 @@ jobs:
         AZURE_REPO_URL: dev.azure.com/Gualo/Test_Git2Repos/_git/Test_Git2Repos
         AZURE_DEVOPS_TOKEN: ${{secrets.AZURE_DEVOPS_TOKEN}}
       run: |
-        git remote add azure-repos $AZURE_REPO_URL
-        git config --global user.email "Fernando.Gualo@uclm.es"
-        git config --global user.name "Gualo"
-        git push azure-repos main
-  # git remote add origin https://Gualo@dev.azure.com/Gualo/Test_Git2Repos/_git/Test_Git2Repos
+        git remote add origin https://Gualo@dev.azure.com/Gualo/Test_Git2Repos/_git/Test_Git2Repos
+      #git remote add azure-repos $AZURE_REPO_URL
+      #git config --global user.email "Fernando.Gualo@uclm.es"
+      #git config --global user.name "Gualo"
+      #git push azure-repos main
+        
