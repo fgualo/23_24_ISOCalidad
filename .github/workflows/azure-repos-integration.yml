@@ -3,7 +3,7 @@ name: Integración con Azure Repos
 on:
   push:
     branches:
-      - main # Cambia esto al nombre de tu rama principal
+      - main
 
 jobs:
   build:
@@ -15,9 +15,11 @@ jobs:
 
     - name: Push to Azure Repos
       env:
-        AZURE_REPO_URL: ${{secrets.AZURE_REPO_URL}} # Define esta variable de secreto en la configuración de tu repositorio
+        AZURE_REPO_URL: https://your-organization.visualstudio.com/YourProject/_git/YourRepo
         AZURE_DEVOPS_TOKEN: ${{secrets.AZURE_DEVOPS_TOKEN}}
-
       run: |
         git remote add azure-repos $AZURE_REPO_URL
-        git push azure-repos main # Cambia "main" al nombre de tu rama principal
+        git config --global user.email "Fernando.Gualo@uclm.es"
+        git config --global user.name "FERNANDO GUALO CEJUDO"
+        git push azure-repos main
+  # git remote add origin https://Gualo@dev.azure.com/Gualo/Test_Git2Repos/_git/Test_Git2Repos
