@@ -23,7 +23,6 @@ jobs:
         git config --global credential.helper store
         echo "https://Gualo:fctx6ofgqhodajhgmsboefb4avjmr6zsk6daifknfvlw5ripxtla@dev.azure.com/Gualo/Test_Git2Repos/_git/Test_Git2Repos" > ~/.git-credentials
         git remote https://Gualo:fctx6ofgqhodajhgmsboefb4avjmr6zsk6daifknfvlw5ripxtla@dev.azure.com/Gualo/Test_Git2Repos/_git/Test_Git2Repos
-        git remote
         git push origin main 
       #git add .
         
