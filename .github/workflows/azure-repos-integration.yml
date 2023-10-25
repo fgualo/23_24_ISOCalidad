@@ -15,10 +15,17 @@ jobs:
 
     - name: Push to Azure Repos
       env:
-        AZURE_REPO_URL: dev.azure.com/Gualo/Test_Git2Repos/_git/Test_Git2Repos
+        AZURE_REPO_URL: https://dev.azure.com/Gualo/Test_Git2Repos/_git/Test_Git2Repos
         AZURE_DEVOPS_TOKEN: ${{secrets.AZURE_DEVOPS_TOKEN}}
       run: |
-        git remote add origin https://Gualo@dev.azure.com/Gualo/Test_Git2Repos/_git/Test_Git2Repos
+        git config --global credential.helper store
+        echo "https://Gualo:fctx6ofgqhodajhgmsboefb4avjmr6zsk6daifknfvlw5ripxtla@dev.azure.com/Gualo/Test_Git2Repos/_git/Test_Git2Repos" > ~/.git-credentials
+        git add .
+        git commit -m "Integrando desde Github"
+        git push origin master
+      #git config --global user.email "Fernando.Gualo@uclm.es"
+      #git config --global user.name "Gualo"
+      #git  add origin https://Gualo@dev.azure.com/Gualo/Test_Git2Repos/_git/Test_Git2Repos
       #git remote add azure-repos $AZURE_REPO_URL
       #git config --global user.email "Fernando.Gualo@uclm.es"
       #git config --global user.name "Gualo"
