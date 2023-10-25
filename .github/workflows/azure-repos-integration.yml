@@ -21,9 +21,7 @@ jobs:
         git config --global user.email "Fernando.Gualo@uclm.es"
         git config --global user.name "Gualo"
         git config --global credential.helper store
-        echo "https://Gualo:fctx6ofgqhodajhgmsboefb4avjmr6zsk6daifknfvlw5ripxtla@dev.azure.com/Gualo/Test_Git2Repos/_git/Test_Git2Repos" > ~/.git-credentials
-        git remote add origin https://Gualo:fctx6ofgqhodajhgmsboefb4avjmr6zsk6daifknfvlw5ripxtla@dev.azure.com/Gualo/Test_Git2Repos/_git/Test_Git2Repos
-        git push origin main 
+        git remote add origin https://Gualo@dev.azure.com/Gualo/Test_Git2Repos/_git/Test_Git2Repos
       #git add .
         
       #git commit -m "Integrando desde Github"
